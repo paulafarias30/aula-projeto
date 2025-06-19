@@ -1,0 +1,233 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif; /*fonte geral do site*/
+}
+
+/* Estilo geral */
+.body {
+  background-color: rgb(166, 205, 168);
+  color: #333;
+}
+
+/* Navbar fixa */
+.navbar {
+  position: fixed;/* fixar a navbar indepentente dos itens*/
+  top: 0;
+  width: 100%; /*largura da navbar*/
+  background-color: #edafb8ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /*linha divisória da navbar*/
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+
+/* Logo arredondada */
+.logo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover; /*A imagem mantém sua proporção, mas pode ser cortada para preencher o espaço completamente.*/
+}
+
+.esquerda {
+  display: flex;
+  gap: 20px;
+
+}
+
+/* Lista de links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Estilo dos links */
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ff69b4; /* cor rosa clara em hover */
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown > a {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  min-width: 150px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+}
+
+.dropdown-menu li a {
+  padding: 5px 10px;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f4f4f4;
+}
+
+/* Mostrar menu drop-down ao passar o mouse */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+/* Espaçamento abaixo da navbar para evitar sobreposição */
+body {
+  padding-top: 80px;
+}
+
+/* Estilo do catálogo de produtos */
+.product-catalog {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product-catalog h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #333;
+}
+
+/* Grid de produtos */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  top: 100%;
+
+}
+
+/* Estilo de cada produto */
+.product {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Imagens dos produtos ajustadas */
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Títulos e descrições */
+.titulo {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.subtitulo {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.paragrafo {
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.preço {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #e91e63;
+  margin-bottom: 15px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #ff69b4;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #e055a7;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  padding: 8px 12px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d45c97; /* Cor rosa suave ao passar o mouse */
+}
+
+  /* Opcional: ajustar tamanho do logo em telas menores */
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
